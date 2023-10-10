@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bender+</title>
+    <link rel="icon" type="image/x-icon" href="images/bender.ico">
+    <script src="https://kit.fontawesome.com/6b77486424.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="text/javascript">
+        emailjs.init('hJe_GAO1vPd6v803d')
+    </script>
+     
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <div class="logo" data-aos="flip-up"></div>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#producto">Productos</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#" class="login">Iniciar Sesion</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+    <section id="banner">
+        
+        <div class="contenido-banner">
+            <video  class="video" autoplay>
+                <source src="/Futurama - Bender El Tremendo.mp4" type="video/mp4">
+              </video>
+              <div class="text-video">
+                <h3><span>Bender+: </span>Mi propio parque con <br> juegos de azar y mujerzuelas</h3>
+                <a href="#" class="boton-empezar">Empezar</a>
+              </div>
+              
+        </div>
+    </section>
+    <section id="servicios" >
+        <h2 class="servicios-titulo">Servicios</h2>
+        <div data-aos="fade-up" >
+
+            <img src="./images/snusnu.jpg" alt="">
+            <h4>Muerte por snu snu</h4>
+            <p> Una sentencia que se le da a los hombres en el planeta Amazonia, una sentencia que consiste en tener relaciones sexuales con el condenado hasta que este pierda la vida.</p>
+            <a href="#" class="boton-saber-mas building">Saber más</a>
+        </div>
+        <div data-aos="fade-up">
+
+            <img src="./images/funny.jpg" alt="">
+            <h4>Diversion asegurada</h4>
+            <p>¡Si alguien pregunta, eres mi desprogramador, no quiero que piensen que somos Robotsexuales!</p>
+            <a href="#" class="boton-saber-mas building">Saber más</a>
+        </div>
+    </section>
+    <section id="iconos"data-aos="fade-up">
+        <div class="contenido-iconos">
+            <div><i class="fa-solid fa-briefcase fa-3x"></i>
+                <h4>Consultorias</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div><i class="fa-solid fa-cart-flatbed-suitcase fa-3x"></i>
+                <h4>Logística</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div id="icono-mobile"><i class="fa-solid fa-mobile  fa-3x"></i>
+                <h4>Diseño</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+
+        <div class="boton-icono">
+            <a href="#" class="boton-saber-mas boton-iconos-mas building">Saber más</a>
+        </div>
+    </section>
+    <!--Seccion de producto-->
+    <section class="seccionProducto" id="producto">
+        <div class="textos">
+            <div class="infoSitio" data-aos="fade-up">
+                <h3 class="tituloSitio" >Tu sitio web a la medida</h3>
+                <p class="textoSitio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id facilis quia
+                    blanditiis veniam totam eum
+                    rerum. Ipsam deserunt accusantium ad!</p>
+            </div>
+            <div class="resena"data-aos="fadeleft-">
+                <p> "Sin duda, este sitio web es una joya en línea. Su diseño intuitivo y elegante facilita la
+                    navegación,
+                    mientras que su contenido es informativo y de alta calidad. Además, la atención al cliente es
+                    excepcional, brindando respuestas rápidas y soluciones efectivas a cualquier pregunta o problema.
+                    ¡Una
+                    experiencia en línea verdaderamente destacada!"</p>
+                <p class="nombreRes"><img class="personaResena" src="./images/persona2.jpg" alt="">Andrea L.</p>
+            </div>
+        </div>
+        
+
+    </section>
+    <section id="contacto">
+        <h4>Contacta con nosotros</h4>
+        <form id="form">
+            <div class="datos-form">
+                <div class="nombre" data-aos="fade-down-right">
+                    <label for="from_name">Nombre</label>
+                    <input type="text" name="from_name" id="from_name" placeholder="Ingrese su nombre">
+                </div>
+                <div class="email" data-aos="fade-down-right">
+                    <label for="email_id">Email</label>
+                    <input type="email_id" name="email_id" id="email" placeholder="Ingrese su correo electronico">
+                </div>
+            </div>
+            <div class="mensaje" data-aos="fade-down-right">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" cols="40" rows="10"
+                    placeholder="¿Que mensaje quieres dejarnos?"></textarea>
+            </div>
+            </div>
+            <div class="boton-formulario" data-aos="fade-down-right">
+                <input type="submit" id="button" value="Send Email" class="boton-saber-mas boton-iconos-mas text-send">
+            </div>
+        </form>
+        <script src="app.js"></script>
+    </section>
+    <footer>
+        <p>&copy2023 DiseñoSoft</p>
+    </footer>
+    <!-- https://michalsnik.github.io/aos/ -->
+    <script src="./pageppl.js"></script>
+  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>

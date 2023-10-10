@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 700;
+}
+
+header {
+  height: 100px;
+  background: rgb(0, 0, 0);
+  padding: 0 50px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position:fixed;
+  width: calc(100vw - 100px);
+  z-index: 999;
+}
+
+.logo {
+  background-image: url(./images/LogoBender.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  width: 150px;
+ margin-top: 20px;
+}
+.logo:hover{
+  animation: flip-vertical-fwd 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(360deg);
+            transform: translateZ(160px) rotateY(360deg);
+  }
+}
+
+
+.menu a , .text-send{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.mostrar-menu {
+  order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+  color: rgb(141, 255, 130);
+}
+#check {
+  display: none;
+}
+/* banner */
+#banner {
+  padding: 0 50px;
+ 
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner::before {
+  content: "";
+  background: rgba(77, 77, 92, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+}
+.video{
+  z-index: -10;
+  height: 100%;
+}
+.text-video{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.contenido-banner h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 0;
+
+}
+.contenido-banner h3 span {
+  font-weight: 600;
+
+}
+.contenido-banner {
+
+  color: #000000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+.boton-empezar {
+  text-decoration: none;
+  color: black;
+  border: 1px solid rgb(141, 255, 130);
+  background-color: rgb(173, 236, 173);
+  padding: 20px 40px;
+  align-self: baseline;
+  font-weight: bolder;
+  border-radius: 10px;
+  font-family: sans-serif;
+  transition: all 0.4s;
+}
+.boton-empezar:hover {
+  background-color: black;
+  color: rgb(141, 255, 130);
+}
+
+/* personas section */
+.servicios-titulo{
+  position: absolute;
+}
+
+#servicios {
+  padding: 100px 50px;
+  
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+  
+}
+#servicios img {
+  border-radius: 100%;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+#servicios div {
+  padding: 30px 30px;
+  width: calc(100vw - 100px);
+  
+}
+
+#servicios div h4 {
+  color: rgb(86, 87, 87);
+  font-size: 20px;
+  margin: 15px 0px;
+}
+
+#servicios div p {
+  color: #4d4d5c;
+  font-size: 18px;
+}
+
+.boton-saber-mas {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 30px;
+  border: 3px solid rgb(141, 255, 130);
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.boton-saber-mas:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(141, 255, 130);
+}
+/* seccion iconos  */
+#iconos{
+    padding: 0 50px;
+    background: rgb(86, 87, 87);
+}
+.contenido-iconos {
+  padding: 50px 50px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.contenido-iconos div {
+  flex: 1;
+  margin: 20px 0px;
+  border-right: 2px solid rgb(173, 236, 173);
+}
+
+#icono-mobile {
+  border: none !important; /*Quitar  resaltado del borde en el ultimo ico*/
+}
+.contenido-iconos div i {
+  color: white;
+}
+.contenido-iconos div h4 {
+  color: white;
+  font-weight: 500;
+  margin: 20px 0px;
+  font-size: 20px;
+}
+
+.contenido-iconos div p {
+  color: rgb(141, 255, 130);
+  font-size: 16px;
+}
+/*Stilo boton iconos*/
+.login{
+  padding: 5px 0px;
+  border:3px solid rgb(141, 255, 130);
+  border-radius: 10px;
+}
+.login:hover{
+  transition: all .3s ease-in-out;
+  color:   #000000 !important;
+  background-color: #ffffff;
+}
+.boton-icono {
+  text-align: center;
+  padding: 40px;
+}
+.boton-iconos-mas{
+    color: #ffffff;
+    
+}
+.datos-form{
+    display: flex;
+}
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+/* producto */
+
+.seccionProducto{
+
+  display: flex;
+  background-color: aliceblue;
+
+
+}
+
+.textos{
+  width: 50vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+
+}
+
+
+.textoSitio{
+  width: 300px;
+}
+.resena{
+
+  width: 340px;
+  height: 200px;
+  background-color: #fcfcfc;
+  box-shadow: 2px 2px 20px  black;
+  padding: 10px;
+  border-bottom: solid 4px   #0063e8  ;
+}
+.tituloSitio{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.textoSitio{
+  font-weight: 200;
+}
+
+.personaResena{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+
+
+}
+.nombreRes{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+
+/* contacto */
+#contacto{
+    background-color: rgb(86, 87, 87);
+    padding: 50px 0px;
+    color: #ffffff ;
+    
+}
+#contacto h4{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#contacto form{
+    max-width: 80vw;
+    margin: 0 auto;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input, form textarea{
+    background: rgb(211, 245, 211);
+    border-radius: 5px;
+    border: 2px solid rgb(141, 255, 130);
+    padding: 10px 5px;
+    outline: 0;
+    color: black;
+    width: 100%;
+}
+form input:focus, form textarea:focus{
+    border-color: gray;
+    box-shadow: 5px 5px 2px 1px black;
+
+}
+form input::placeholder, form textarea::placeholder{
+    color: gray;
+    
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boton-formulario .boton-saber-mas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: 0.4s;
+    margin-left: 15px;
+    color: black;
+}
+.boton-formulario :hover{
+  color: rgb(141, 255, 130);
+}
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+/*media query*/
+@media (max-width: 760px) {
+  .mostrar-menu,
+  .esconder-menu {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    /* left: 0; */
+    top: 0;
+    right: -100%;
+    text-align: center;
+    padding: 100px, 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  #banner{
+    min-height: 300px;
+  }
+
+  /*Responsive iconos*/
+  .contenido-iconos {
+    flex-direction: column;
+  }
+  .contenido-iconos div {
+    border: none;
+  }
+  .datos-form{
+    flex-direction: column;
+  }
+  #servicios{
+    flex-wrap: wrap;
+  }
+
+  /* producto */
+  .seccionProducto{
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+}
