@@ -7,9 +7,13 @@ body {
     height: 100vh;
 }
 
+.containerBorder {
+    border-radius: 25px;
+    border-color: black;
+    background: rgb(86, 87, 87);
+}
+
 .containerBox {
-    position: absolute;
-    left: 5%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -17,14 +21,8 @@ body {
     align-items: center;
 }
 
-.containerBorder {
-    border-radius: 25px;
-    border-color: black;
-    background: rgb(86, 87, 87);
-}
-
-.columnform {
-    width: 100%;
+.Columnform {
+    width: 91.666667%;
 }
 
 .contextBody {
@@ -40,6 +38,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 80px 0px 30px 20px;
 }
 
 .containerForm {
@@ -94,6 +93,10 @@ body {
     color: rgb(141, 255, 130);
 }
 
+.containerButton .espacio {
+    padding: 5px;
+}
+
 .link {
     color: #fff;
     display: flex;
@@ -107,30 +110,51 @@ body {
     text-decoration: none;
 }
 
+.link a:hover {
+    opacity: 0.7;
+}
+
 .link label {
     padding: 5px;
 }
 
 .imgLogo {
+    position: relative;
+    left: 8%;
     width: 90%;
+    padding: 0px 0px 20px 0px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
     .Columnform {
         width: 91.666667%;
     }
+
+    .containerText {
+        padding: 80px 0px 0px 0px;
+    }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .card-body {
         padding: 3rem 5rem;
-        /* Tamaño de padding en dispositivos medianos y grandes */
     }
 
     .contextBody {
         padding: 3rem;
+        align-items: center;
     }
 
+    .containerText {
+        padding: 80px 0px 0px 0px;
+    }
+
+    .imgLogo {
+        display: block;
+        position: fixed;
+        width: 90%;
+        padding: 30px 20px 20px 50px;
+    }
 }
 
 @media (min-width: 992px) {
