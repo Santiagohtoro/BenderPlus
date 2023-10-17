@@ -24,20 +24,20 @@
                                     <div class="containerDiv">
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input type="email" required class="form-control" />
+                                            <input type="email" class="form-control" id="inputEmail" />
                                             <label class="form-label" for="form3Example3c">Tu correo</label>
                                         </div>
                                     </div>
                                     <div class="containerDiv">
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input type="password" id="passwordInput" class="form-control" required />
+                                            <input type="password" id="inputPassword" class="form-control" />
                                             <label class="form-label" for="form3Example4c">Contraseña</label>
                                         </div>
                                     </div>
                                     <!--Disable Error-->
                                     <div class="containerButton">
-                                        <button class="btnLogIn">Ingresar</button>
+                                        <button type="button" class="btnLogIn" id="btnUserLog">Ingresar</button>
                                         <div class="espacio"></div>
                                         <a class="btnLogIn" href="../index.html">Volver</a>
                                     </div>
@@ -56,5 +56,8 @@
         </div>
     </section>
 </body>
+<!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../static/js/login.js"></script>
 
 </html>
