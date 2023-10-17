@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../attachment/images/hughefner.png">
+    <link rel="stylesheet" href="../static/css/comprar.css">
+    <title>Compras</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <div class="logo" data-aos="flip-up"></div>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="#ayuda">Ayuda</a>
+            <a class="separation">/</a>
+            <a href="#producto">PQR</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="informationBuy">
+            <div class="Domicilio">
+                <h1>Agregar Domicilio</h1>
+                <div class="inputRow">
+                    <label for="">Nombre y apellido</label>
+                    <input type="text">
+                </div>
+                <div class="inputRow">
+                    <label for="">Departamento</label>
+                    <input type="text">
+                    <label for="">Municipio, capital o localidad</label>
+                    <input type="text">
+                </div>
+                <div class="inputRow">
+                    <label for="">Barrio</label>
+                    <input type="text">
+                </div>
+                <div class="inputRow">
+                    <label for="">Tipo de calle</label>
+                    <select name="" id="">
+                        <option value="null"></option>
+                        <option value="Avenida">Avenida</option>
+                        <option value="Avenida_Calle">Avenida Calle</option>
+                        <option value="Avenida_Carrera">Avenida Carrera</option>
+                        <option value="Calle">Calle</option>
+                        <option value="Carrera">Carrera</option>
+                        <option value="Circular">Circular</option>
+                        <option value="Circunvalar">Circunvalar</option>
+                        <option value="Diagonal">Diagonal</option>
+                        <option value="Manzana">Manzana</option>
+                        <option value="Transversal">Transversal</option>
+                        <option value="Vía">Vía</option>
+                    </select>
+                    <label for="">Calle</label>
+                    <input type="text">
+                    <label for="">Número</label>
+                    <input type="text">
+                    <input type="checkbox" value="No tengo número">
+                    <label for="">No tengo número</label>
+                </div>
+                <div class="inputRow">
+                    <label for="">¿Es tu trabajo o casa?</label>
+                    <input type="radio" name="" id="">
+                    <label for="">Trabajo</label>
+                    <input type="radio" name="" id="">
+                    <label for="">Casa</label>
+                </div>
+                <div class="inputRow">
+                    <label for="">Teléfono de contacto</label>
+                    <input type="number">
+                </div>
+                <div class="inputRow">
+                    <label for="">Referencias adicionales de esta dirección</label>
+                    <textarea name="" id="" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <nav class="bannerBuy">
+                <h2>Resumen Compra</h2>
+                <p>#</p>
+            </nav>
+        </section>
+    </div>
+</body>
+
+</html>
