@@ -2,11 +2,11 @@ const btnLogIng = document.getElementById('btnUserLog');
 
 btnLogIng.addEventListener('click', (e) => {
     e.preventDefault();
-    
+
     let errors = [];
 
-    let inputEmail = document.getElementById('inputEmail');
-    let inputPassword = document.getElementById('inputPassword');
+    let inputEmail = document.getElementById('inputEmail'),
+        inputPassword = document.getElementById('inputPassword');
 
 
     if (inputEmail.value.length === 0) {
