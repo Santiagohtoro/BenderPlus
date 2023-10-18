@@ -113,6 +113,34 @@ header {
     border-radius: 20px 0px 0px 20px;
 }
 
+.inputSeparate {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: rgb(140, 140, 140);
+    display: flex;
+}
+
+.inputSeparate .inputDepartament,
+.inputSeparate .inputCity  {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.inputSeparate #inputDeparment,
+.inputSeparate #inputCity  {
+    border-radius: 5px;
+    border: 0.5px solid rgb(0, 0, 0);
+    width: 90%;
+    height: 35px;
+}
+
+.inputRow #inputNeigh {
+    border-radius: 5px;
+    border: 0.5px solid rgb(0, 0, 0);
+    width: 45%;
+    height: 35px;
+}
+
 .inputRow {
     padding: 15px;
     font-size: 1rem;
@@ -182,7 +210,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     height: 10%;
     font-size: 1rem;
-    resize:vertical;
+    resize: vertical;
     overflow: hidden;
 }
 
