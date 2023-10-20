@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../attachment/images/hughefner.png">
+    <link rel="stylesheet" href="../static/css/comprar.css">
+    <title>Compras</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <div class="logo" data-aos="flip-up"></div>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="#ayuda">Ayuda</a>
+            <a class="separation">/</a>
+            <a href="#producto">PQR</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="informationBuy">
+            <div class="Domicilio">
+                <h1>Agregar Domicilio</h1>
+                <div class="inputRow">
+                    <p for="txtName">Nombres y apellidos</p>
+                    <input type="text" name="txtName" id="inputName">
+                </div>
+                <div class="inputSeparate">
+                    <div class="inputDepartament">
+                        <p for="txtDeparment">Departamento</p>
+                        <input type="text" name="txtDeparment" id="inputDeparment">
+                    </div>
+                    <div class="inputCity">
+                        <p for="txtCity">Municipio, capital o localidad</p>
+                        <input type="text" name="txtCity" id="inputCity">
+                    </div>
+                </div>
+                <div class="inputRow">
+                    <p for="txtBarrio">Barrio</p>
+                    <input type="text" name="txtBarrio" id="inputNeigh">
+                </div>
+                <div class="inputRow">
+                    <label for="optsStreet">Tipo de calle</label>
+                    <select name="optsStreet" id="inputTypeStreet">
+                        <option value="null"></option>
+                        <option value="Avenida">Avenida</option>
+                        <option value="Avenida_Calle">Avenida Calle</option>
+                        <option value="Avenida_Carrera">Avenida Carrera</option>
+                        <option value="Calle">Calle</option>
+                        <option value="Carrera">Carrera</option>
+                        <option value="Circular">Circular</option>
+                        <option value="Circunvalar">Circunvalar</option>
+                        <option value="Diagonal">Diagonal</option>
+                        <option value="Manzana">Manzana</option>
+                        <option value="Transversal">Transversal</option>
+                        <option value="Vía">Vía</option>
+                    </select>
+                    <label for="txtStreet">Calle</label>
+                    <input type="text" name="txtStreet" id="inputStreet">
+                    <label for="txtNumberStreet">Número</label>
+                    <input type="text" name="txtNumberStreet" id="inputNumber1" placeholder=" #">
+                    <input type="text" name="txtNumberStreet" id="inputNumber2" placeholder=" -">
+                    <input type="checkbox" value="No tengo número" name="checkNumber" id="inputCheckNum">
+                    <label for="checkNumber">No tengo número</label>
+                </div>
+                <div class="inputRow">
+                    <p for="typeAddress">¿Es tu trabajo o casa?</p>
+                    <input type="radio" name="typeAddress" id="inputRadioWork">
+                    <label for="typeAddress"><i class="fa-solid fa-briefcase"></i> Trabajo</label>
+                    <input type="radio" name="typeAddress" id="inputRadioHouse">
+                    <label for="typeAddress"><i class="fa-solid fa-house"></i> Casa</label>
+                </div>
+                <div class="inputRow">
+                    <p for="txtPhoneContact">Teléfono de contacto</p>
+                    <input type="number" name="txtPhoneContact" id="inputContactNum" placeholder=" +57">
+                </div>
+                <div class="inputRow">
+                    <p for="aditionalReference">Referencias adicionales de esta dirección</p>
+                    <textarea name="aditionalReference" id="descriptionText"
+                        placeholder=" Descripción de la fachada, puntos de referencia para encontrarla, indicaciones de seguridad, etc."></textarea>
+                </div>
+                <div class="btnClass">
+                    <button type="button" id="btnContinuar">Continuar</button>
+                </div>
+            </div>
+            <nav class="bannerBuy">
+                <h2>Resumen Compra</h2>
+                <p>#</p>
+            </nav>
+        </section>
+    </div>
+    <script src="../static/js/comprar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/03ce1c2806.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
