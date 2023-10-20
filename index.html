@@ -10,6 +10,9 @@
     <script src="https://kit.fontawesome.com/6b77486424.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript">
         emailjs.init('hJe_GAO1vPd6v803d')
     </script>
@@ -51,63 +54,84 @@
     </section>
     <section id="servicios" >
         <h2 class="servicios-titulo">Servicios</h2>
-        <div data-aos="fade-up" >
+        <div class="carrusel-servicios">
+            <div data-aos="fade-up" >
 
-            <img src="./attachment/images/snusnu.jpg" alt="">
-            <h4>Muerte por snu snu</h4>
-            <p> Una sentencia que se le da a los hombres en el planeta Amazonia, una sentencia que consiste en tener relaciones sexuales con el condenado hasta que este pierda la vida.</p>
-            <a href="#" class="boton-saber-mas building">Saber más</a>
-        </div>
-        <div data-aos="fade-up">
+                <img src="./attachment/images/juegodeazar.jpg" alt="">
+                <h4>Juegos de Azar</h4>
+                <p> Gana premios y vive la experiencia de azar del mañana.</p>
+                <a href="#" class="boton-saber-mas building">Saber más</a>
+            </div>
+            <div data-aos="fade-up" >
 
-            <img src="./attachment/images/funny.jpg" alt="">
-            <h4>Diversion asegurada</h4>
-            <p>¡Si alguien pregunta, eres mi desprogramador, no quiero que piensen que somos Robotsexuales!</p>
-            <a href="#" class="boton-saber-mas building">Saber más</a>
-        </div>
-    </section>
-    <section id="iconos"data-aos="fade-up">
-        <div class="contenido-iconos">
-            <div><i class="fa-solid fa-briefcase fa-3x"></i>
-                <h4>Consultorias</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <img src="./attachment/images/citasrobot.jpg" alt="">
+                <h4>Simulador de Citas</h4>
+                <p> Explora relaciones virtuales con robots diseñados para adaptarse a tus preferencias.</p>
+                <a href="#" class="boton-saber-mas building">Saber más</a>
             </div>
-            <div><i class="fa-solid fa-cart-flatbed-suitcase fa-3x"></i>
-                <h4>Logística</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div id="icono-mobile"><i class="fa-solid fa-mobile  fa-3x"></i>
-                <h4>Diseño</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
+            <div data-aos="fade-up" >
 
-        <div class="boton-icono">
-            <a href="#" class="boton-saber-mas boton-iconos-mas building">Saber más</a>
+                <img src="./attachment/images/clubbaile.jpg" alt="">
+                <h4>Club de Baile Virtual</h4>
+                <p> Baila y disfruta en un club nocturno digital donde los robots son las estrellas de la pista.</p>
+                <a href="#" class="boton-saber-mas building">Saber más</a>
+            </div>
+            <div data-aos="fade-up" >
+
+                <img src="./attachment/images/snusnu.jpg" alt="">
+                <h4>Muerte por snu snu</h4>
+                <p> Una sentencia que se le da a los hombres en el planeta Amazonia, una sentencia que consiste en tener relaciones sexuales con el condenado hasta que este pierda la vida.</p>
+                <a href="#" class="boton-saber-mas building">Saber más</a>
+            </div>
+            <div data-aos="fade-up">
+
+                <img src="./attachment/images/funny.jpg" alt="">
+                <h4>Talleres de Personalización</h4>
+                <p>Diseña y personaliza tu propio robot virtual según tus deseos y especificaciones. Elige características, personalidades y más.</p>
+                <a href="#" class="boton-saber-mas building">Saber más</a>
+            </div>
         </div>
     </section>
     <!--Seccion de producto-->
-    <section class="seccionProducto" id="producto">
-        <div class="textos">
-            <div class="infoSitio" data-aos="fade-up">
-                <h3 class="tituloSitio" >Tu sitio web a la medida</h3>
-                <p class="textoSitio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id facilis quia
-                    blanditiis veniam totam eum
-                    rerum. Ipsam deserunt accusantium ad!</p>
-            </div>
-            <div class="resena"data-aos="fadeleft-">
-                <p> "Sin duda, este sitio web es una joya en línea. Su diseño intuitivo y elegante facilita la
-                    navegación,
-                    mientras que su contenido es informativo y de alta calidad. Además, la atención al cliente es
-                    excepcional, brindando respuestas rápidas y soluciones efectivas a cualquier pregunta o problema.
-                    ¡Una
-                    experiencia en línea verdaderamente destacada!"</p>
-                <p class="nombreRes"><img class="personaResena" src="./attachment/images/persona2.jpg" alt="">Andrea L.</p>
-            </div>
+    <section id="robots-section">
+        <h2 class="robot-title">Mujerzuelas</h2>
+        <div class="robot-card">
+            <img src="./attachment/images/r1.jpg" alt="Robot 1">
+            <h4>Candy</h4>
+            <p>"¿Me das fuego? Necesito encenderme de ti"</p>
         </div>
         
+        <div class="robot-card">
+            <img src="./attachment/images/r2.jpg" alt="Robot 2">
+            <h4>Kendall</h4>
+            <p>"Me gusta pecar con tentaciones como tú"</p>
+        </div>
 
+        <div class="robot-card">
+            <img src="./attachment/images/r3.jpg" alt="Robot 2">
+            <h4>Dakota</h4>
+            <p>"No dejo de pensar en otra cosa que no sea tocarte"</p>
+        </div>
+
+        <div class="robot-card">
+            <img src="./attachment/images/r4.jpg" alt="Robot 2">
+            <h4>Trixie</h4>
+            <p>"Soy tu próximo amor, ¿me invitas a tu cama?"</p>
+        </div>
+
+        <div class="robot-card">
+            <img src="./attachment/images/r5.jpg" alt="Robot 2">
+            <h4>Kitty</h4>
+            <p>"Sabemos que el remedio para lo nuestro es terminar en tu colchón"</p>
+        </div>
+
+        <div class="robot-card">
+            <img src="./attachment/images/r6.jpg" alt="Robot 2">
+            <h4>Pamela</h4>
+            <p>"Necesito horas extras en el día para recorrerte el cuerpo"</p>
+        </div>    
     </section>
+    
     <section id="contacto">
         <h4>Contacta con nosotros</h4>
         <form id="form">

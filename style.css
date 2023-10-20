@@ -20,6 +20,16 @@ header {
   z-index: 999;
 }
 
+body::-webkit-scrollbar {
+  width: 0;  
+  height: 0;
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
 .logo {
   background-image: url(./attachment/images/LogoBender.png);
   background-size: contain;
@@ -138,6 +148,11 @@ header {
 /* personas section */
 .servicios-titulo{
   position: absolute;
+  text-align: center;  
+  margin-bottom: 30px; 
+  font-size: 2rem;     
+  color: black;  
+  width: 100%;  
 }
 
 #servicios {
@@ -188,6 +203,32 @@ header {
 
 .boton-saber-mas:hover {
   background: rgb(0, 0, 0);
+  color: rgb(141, 255, 130);
+}
+
+.carrusel-servicios {
+  position: relative; 
+}
+.slick-prev, .slick-next {
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+}
+.slick-prev {
+  left: -40px; 
+}
+.slick-next {
+  right: -40px; 
+}
+.slick-prev i, .slick-next i {
   color: rgb(141, 255, 130);
 }
 /* seccion iconos  */
@@ -252,61 +293,48 @@ header {
 }
 /* producto */
 
-.seccionProducto{
-
+#robots-section {
   display: flex;
-  background-color: aliceblue;
-
-
-}
-
-.textos{
-  width: 50vw;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-
-
-}
-
-
-.textoSitio{
-  width: 300px;
-}
-.resena{
-
-  width: 340px;
-  height: 200px;
-  background-color: #fcfcfc;
-  box-shadow: 2px 2px 20px  black;
-  padding: 10px;
-  border-bottom: solid 4px   #0063e8  ;
-}
-.tituloSitio{
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.textoSitio{
-  font-weight: 200;
-}
-
-.personaResena{
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-
-
-}
-.nombreRes{
-  display: flex;
-  justify-content: end;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 20px;
-  padding-right: 20px;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+.robot-title {
+  text-align: center;  
+  margin-bottom: 30px; 
+  font-size: 2rem;     
+  color: black;  
+  width: 100%;       
+}
+
+.robot-card {
+  flex-basis: calc(33.3333% - 20px);
+  width: 300px;  
+  height: 400px;  
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;  
+}
+
+.robot-card img {
+  max-width: 100%;  
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 180px; 
+  border-radius: 15px;
+}
+
+.robot-card h4, .robot-card p {
+  padding: 10px;
 }
 
 
