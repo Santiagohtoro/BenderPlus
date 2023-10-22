@@ -337,6 +337,26 @@ body {
   padding: 10px;
 }
 
+.boton-saber-mas-robot{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  width: 150px;
+  color: black;
+  padding: 10px 30px;
+  border: 3px solid rgb(141, 255, 130);
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; 
+}
+
+.boton-saber-mas-robot:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(141, 255, 130);
+}
 
 /* contacto */
 #contacto{
