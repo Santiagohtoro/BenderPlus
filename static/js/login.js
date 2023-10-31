@@ -9,12 +9,10 @@ const login = () => {
 
     auth.signInWithEmailAndPassword(LoginCorreo, LoginPassword)
         .then(() => {
-            // Inicio de sesión exitoso, puedes redirigir o realizar otras acciones aquí
             let user = auth.currentUser;
-            window.location.href = '../index.html'; // Redirige a la página de inicio, por ejemplo
+            window.location.href = '../index.html';
         })
         .catch((error) => {
-            // Hubo un error en el inicio de sesión, maneja los errores aquí
             const errorCode = error.code;
             let loginError = [];
 
