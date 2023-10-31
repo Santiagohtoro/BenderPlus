@@ -156,25 +156,24 @@ body {
 }
 
 #servicios {
-  padding: 100px 50px;
-  
+  padding: 100px 50px; 
   display: flex;
   justify-content: center;
   text-align: center;
-  
-  
 }
 #servicios img {
   border-radius: 100%;
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover !important; 
+  object-position: center center !important;
 }
 
 #servicios div {
   padding: 30px 30px;
-  width: calc(100vw - 100px);
-  
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 #servicios div h4 {
@@ -208,6 +207,7 @@ body {
 
 .carrusel-servicios {
   position: relative; 
+  width: 100%;
 }
 .slick-prev, .slick-next {
   z-index: 1;
@@ -475,4 +475,7 @@ footer{
     justify-content: center;
 
   }
+  .robot-card {
+    flex-basis: calc(50% - 20px);
+}
 }
