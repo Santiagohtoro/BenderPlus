@@ -24,8 +24,8 @@ window.addEventListener('load', () => {
             errors.length = 0; // Vaciar el array de errores
 
             if (!inputCheckNum.checked) {
-                validarCampo(inputNumber1, "Número", "El campo número no puede estar vacío");
-                validarCampo(inputNumber2, "Número", "El campo número no puede estar vacío");
+                validarCampo(inputNumber1, "Número 1", "El campo número 1 no puede estar vacío");
+                validarCampo(inputNumber2, "Número 2", "El campo número 2 no puede estar vacío");
             }
 
             validarCampo(inputName, "Nombre", "El campo nombre no puede estar vacío");

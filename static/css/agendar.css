@@ -189,8 +189,22 @@ header {
     margin-right: 5px;
 }
 
+.dateRow {
+    display: flex;
+    margin-top: 1%;
+    align-items: center;
+}
+
+.dateRow p {
+    padding: 0px 5px 0px 5px;
+}
+
 .calendarRent {
     text-align: center;
+}
+
+#inputCalendar {
+    margin-left: 5px;
 }
 
 /* Para navegadores webkit (Chrome, Safari) */
@@ -321,5 +335,15 @@ input[type="number"]::-webkit-outer-spin-button {
     #inputContactNum {
         width: 100%;
         height: 35px;
+    }
+
+    .dateRow {
+        display: block;
+        margin-top: 1%;
+        align-items: center;
+    }
+
+    .calendarRent input {
+        padding: 0px 10px 0px 10px;
     }
 }

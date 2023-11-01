@@ -74,8 +74,15 @@
                     <label for="checkNumber">No tengo número</label>
                 </div>
                 <div class="inputRow">
-                    <p for="calendarRent">Fecha de renta</p>
-                    <input type="date" class="calendarRent">
+                    <p>Fecha de renta</p>
+                    <div class="dateRow">
+                        <p>Fecha Inicial</p>
+                        <input type="date" class="calendarRent" id="inputStartDate">
+                        <p>Fecha Final</p>
+                        <input type="date" class="calendarRent" id="inputFinalDate">
+                        <input type="checkbox" class="calendarRent" id="inputCalendar">
+                        <p>Solo 1 dia</p>
+                    </div>
                 </div>
                 <div class="inputRow">
                     <p for="txtPhoneContact">Teléfono de contacto</p>
