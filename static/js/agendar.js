@@ -12,8 +12,6 @@ window.addEventListener('load', () => {
     let inputContactNum = document.getElementById('inputContactNum');
 
     const inputCheckNum = document.getElementById('inputCheckNum');
-    const inputRadioHouse = document.getElementById('inputRadioHouse');
-    const inputRadioWork = document.getElementById('inputRadioWork');
 
     const errors = [];
 
@@ -36,7 +34,6 @@ window.addEventListener('load', () => {
             validarCampo(inputStreet, "Calle", "El campo calle no puede estar vacío");
             validarCampo(inputContactNum, "Teléfono de contacto", "El campo teléfono de contacto no puede estar vacío");
 
-            validarTypeAddress();
             imprimirErrores();
         });
     };
@@ -61,17 +58,6 @@ window.addEventListener('load', () => {
             });
         }
     };
-
-    const validarTypeAddress = () => {
-        if (inputRadioHouse.checked || inputRadioWork.checked) {
-            //Good
-        } else {
-            errors.push({
-                input: "Radio Casa o trabajo",
-                message: "Se debe seleccionar una de las opciones"
-            });
-        }
-    }
 
     // Función para verificar el checkbox
     const verificarCheck = () => {
