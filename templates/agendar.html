@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../attachment/images/hughefner.png">
     <link rel="stylesheet" href="../static/css/header.css">
-    <link rel="stylesheet" href="../static/css/comprar.css">
+    <link rel="stylesheet" href="../static/css/agendar.css">
     <title>Compras</title>
 </head>
 
@@ -29,9 +29,9 @@
         </nav>
     </header>
     <div class="container">
-        <section class="informationBuy">
-            <div class="Domicilio">
-                <h1>Agregar Domicilio</h1>
+        <section class="informationRent">
+            <div class="Agenda">
+                <h1>Reservar</h1>
                 <div class="inputRow">
                     <p for="txtName">Nombres y apellidos</p>
                     <input type="text" name="txtName" id="inputName">
@@ -75,34 +75,33 @@
                     <label for="checkNumber">No tengo número</label>
                 </div>
                 <div class="inputRow">
-                    <p for="typeAddress">¿Es tu trabajo o casa?</p>
-                    <input type="radio" name="typeAddress" id="inputRadioWork">
-                    <label for="typeAddress"><i class="fa-solid fa-briefcase"></i> Trabajo</label>
-                    <input type="radio" name="typeAddress" id="inputRadioHouse">
-                    <label for="typeAddress"><i class="fa-solid fa-house"></i> Casa</label>
+                    <p>Fecha de renta</p>
+                    <div class="dateRow">
+                        <p>Fecha Inicial</p>
+                        <input type="date" class="calendarRent" id="inputStartDate">
+                        <p>Fecha Final</p>
+                        <input type="date" class="calendarRent" id="inputFinalDate">
+                        <input type="checkbox" class="calendarRent" id="inputCalendar">
+                        <p>Solo 1 dia</p>
+                    </div>
                 </div>
                 <div class="inputRow">
                     <p for="txtPhoneContact">Teléfono de contacto</p>
                     <input type="number" name="txtPhoneContact" id="inputContactNum" placeholder=" +57">
                 </div>
-                <div class="inputRow">
-                    <p for="aditionalReference">Referencias adicionales de esta dirección</p>
-                    <textarea name="aditionalReference" id="descriptionText"
-                        placeholder=" Descripción de la fachada, puntos de referencia para encontrarla, indicaciones de seguridad, etc."></textarea>
-                </div>
                 <div class="btnClass">
                     <button type="button" id="btnContinuar">Continuar</button>
                 </div>
             </div>
-            <nav class="bannerBuy">
-                <h2>Resumen Compra</h2>
+            <nav class="bannerRent">
+                <h2>Resumen Alquiler</h2>
                 <p>#</p>
             </nav>
         </section>
     </div>
-    <script src="../static/js/comprar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/03ce1c2806.js" crossorigin="anonymous"></script>
+    <script src="../static/js/agendar.js"></script>
 </body>
 
 </html>
