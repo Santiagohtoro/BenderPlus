@@ -1,12 +1,12 @@
-
 /* banner */
 #banner {
   padding: 0 50px;
- 
+
   height: 90vh;
   background-size: cover;
   background-position: center;
 }
+
 #banner::before {
   content: "";
   background: rgba(77, 77, 92, 0.5);
@@ -15,27 +15,32 @@
   height: 90vh;
   left: 0;
 }
-.video{
+
+.video {
   z-index: -10;
   height: 100%;
 }
-.text-video{
+
+.text-video {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
 }
+
 .contenido-banner h3 {
   font-size: 30px;
   font-weight: 400;
   padding: 10px 0;
 
 }
+
 .contenido-banner h3 span {
   font-weight: 600;
 
 }
+
 .contenido-banner {
 
   color: #000000;
@@ -45,6 +50,7 @@
   justify-content: center;
   gap: 1em;
 }
+
 .boton-empezar {
   text-decoration: none;
   color: black;
@@ -57,32 +63,34 @@
   font-family: sans-serif;
   transition: all 0.4s;
 }
+
 .boton-empezar:hover {
   background-color: black;
   color: rgb(141, 255, 130);
 }
 
 /* personas section */
-.servicios-titulo{
+.servicios-titulo {
   position: absolute;
-  text-align: center;  
-  margin-bottom: 30px; 
-  font-size: 2rem;     
-  color: black;  
-  width: 100%;  
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: black;
+  width: 100%;
 }
 
 #servicios {
-  padding: 100px 50px; 
+  padding: 100px 50px;
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
 #servicios img {
   border-radius: 100%;
   width: 280px !important;
   height: 280px !important;
-  object-fit: cover !important; 
+  object-fit: cover !important;
   object-position: center center !important;
 }
 
@@ -137,7 +145,8 @@
   margin: 0 auto;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   z-index: 1;
   width: 30px;
   height: 30px;
@@ -147,29 +156,36 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
 }
+
 .slick-prev {
-  left: -40px; 
+  left: -40px;
 }
+
 .slick-next {
-  right: -40px; 
+  right: -40px;
 }
-.slick-prev i, .slick-next i {
+
+.slick-prev i,
+.slick-next i {
   color: rgb(141, 255, 130);
 }
+
 /* seccion iconos  */
-#iconos{
-    padding: 0 50px;
-    background: rgb(86, 87, 87);
+#iconos {
+  padding: 0 50px;
+  background: rgb(86, 87, 87);
 }
+
 .contenido-iconos {
   padding: 50px 50px 0 15px;
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
+
 .contenido-iconos div {
   flex: 1;
   margin: 20px 0px;
@@ -177,11 +193,14 @@
 }
 
 #icono-mobile {
-  border: none !important; /*Quitar  resaltado del borde en el ultimo ico*/
+  border: none !important;
+  /*Quitar  resaltado del borde en el ultimo ico*/
 }
+
 .contenido-iconos div i {
   color: white;
 }
+
 .contenido-iconos div h4 {
   color: white;
   font-weight: 500;
@@ -193,80 +212,41 @@
   color: rgb(141, 255, 130);
   font-size: 16px;
 }
+
 /*Stilo boton iconos*/
-.login{
+.login {
   padding: 5px 0px;
-  border:3px solid rgb(141, 255, 130);
+  border: 3px solid rgb(141, 255, 130);
   border-radius: 10px;
 }
-.login:hover{
+
+.login:hover {
   transition: all .3s ease-in-out;
-  color:   #000000 !important;
+  color: #000000 !important;
   background-color: #ffffff;
 }
+
 .boton-icono {
   text-align: center;
   padding: 40px;
 }
-.boton-iconos-mas{
-    color: #ffffff;
-    
-}
-.datos-form{
-    display: flex;
-}
-.datos-form div{
-    padding: 10px;
-    flex: 1;
-}
-/* producto */
 
-#robots-section {
+.boton-iconos-mas {
+  color: #ffffff;
+
+}
+
+.datos-form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 50px 0;
-  min-height: 100vh;
 }
 
-.robot-title {
-  text-align: center;  
-  margin-bottom: 30px; 
-  font-size: 2rem;     
-  color: black;  
-  width: 100%;       
-}
-
-.robot-card {
-  flex-basis: calc(33.3333% - 20px);
-  width: 300px;  
-  height: 400px;  
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  flex-direction: column;  
-  justify-content: center;  
-}
-
-.robot-card img {
-  max-width: 100%;  
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  max-height: 180px; 
-  border-radius: 15px;
-}
-
-.robot-card h4, .robot-card p {
+.datos-form div {
   padding: 10px;
+  flex: 1;
 }
 
-.boton-saber-mas-robot{
-  display: block;  
+.boton-saber-mas-robot {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
@@ -278,7 +258,7 @@
   margin-top: 15px;
   transition: all 0.4s;
   font-weight: bolder;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .boton-saber-mas-robot:hover {
@@ -286,72 +266,110 @@
   color: rgb(141, 255, 130);
 }
 
-/* contacto */
-#contacto{
-    background-color: rgb(86, 87, 87);
-    padding: 50px 0px;
-    color: #ffffff ;
-    
+/* Quienes somos */
+.quienesSomos{
+  display: flex;
 }
-#contacto h4{
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-#contacto form{
-    max-width: 80vw;
-    margin: 0 auto;
-}
-form label{
-    display: block;
-    margin-bottom: 10px;
-}
-form input, form textarea{
-    background: rgb(211, 245, 211);
-    border-radius: 5px;
-    border: 2px solid rgb(141, 255, 130);
-    padding: 10px 5px;
-    outline: 0;
-    color: black;
-    width: 100%;
-}
-form input:focus, form textarea:focus{
-    border-color: gray;
-    box-shadow: 5px 5px 2px 1px black;
 
+.quienesSomos h2{
+  font-size: 2rem;
 }
-form input::placeholder, form textarea::placeholder{
-    color: gray;
-    
+
+.quienesSomos p{
+  font-size: 1.2rem;
 }
-.mensaje{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+
+.quienesSomos i{
+  color: #fff;
 }
-.boton-formulario .boton-saber-mas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    transition: 0.4s;
-    margin-left: 15px;
-    color: black;
+
+.bender, .ideaBender{
+  max-width: 700px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
 }
-.boton-formulario :hover{
+
+/* contacto */
+#contacto {
+  background-color: rgb(86, 87, 87);
+  padding: 50px 0px;
+  color: #ffffff;
+}
+
+#contacto h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#contacto form {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  background: rgb(211, 245, 211);
+  border-radius: 5px;
+  border: 2px solid rgb(141, 255, 130);
+  padding: 10px 5px;
+  outline: 0;
+  color: black;
+  width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: gray;
+  box-shadow: 5px 5px 2px 1px black;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: gray;
+}
+
+.mensaje {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.boton-formulario .boton-saber-mas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.4s;
+  margin-left: 15px;
+  color: black;
+}
+
+.boton-formulario :hover {
   color: rgb(141, 255, 130);
 }
-footer{
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0px;
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
 }
+
 /*media query*/
 @media (max-width: 760px) {
+
   .mostrar-menu,
   .esconder-menu {
     display: block;
   }
+
   .menu {
     position: fixed;
     width: 100%;
@@ -365,21 +383,24 @@ footer{
     z-index: 100;
     transition: 0.8s;
   }
+
   .menu a {
     display: block;
     padding: 20px;
   }
+
   .esconder-menu {
     position: absolute;
     top: 40px;
     right: 40px;
 
   }
-  #check:checked ~ .menu {
+
+  #check:checked~.menu {
     right: 0;
   }
 
-  #banner{
+  #banner {
     min-height: 300px;
   }
 
@@ -387,27 +408,32 @@ footer{
   .contenido-iconos {
     flex-direction: column;
   }
+
   .contenido-iconos div {
     border: none;
   }
-  .datos-form{
+
+  .datos-form {
     flex-direction: column;
   }
-  #servicios{
+
+  #servicios {
     flex-wrap: wrap;
   }
 
   /* producto */
-  .seccionProducto{
+  .seccionProducto {
     flex-wrap: wrap;
     justify-content: center;
 
   }
+
   .robot-card {
     flex-basis: calc(50% - 20px);
   }
+
   .boton-saber-mas-robot {
-    padding: 8px 20px; 
-    font-size: 14px; 
+    padding: 8px 20px;
+    font-size: 14px;
   }
 }
