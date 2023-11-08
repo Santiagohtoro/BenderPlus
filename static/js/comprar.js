@@ -154,8 +154,10 @@ window.addEventListener('load', () => {
      */
     const firebaseData = (nombre, departamento, ciudad, barrio, tipoCalle, numeroCalle, numero1, numero2, radioValue, telefonoContacto, descriptionText) => {
         const nuevoId = generarClaveUnica();
+        const userId = sessionStorage.getItem('user_uid');
         //Data de pedido
         let deliveryData = {
+            id_usuario: userId,
             nombre: nombre,
             departamento: departamento,
             ciudad: ciudad,

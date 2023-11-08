@@ -132,8 +132,10 @@ window.addEventListener('load', () => {
      */
     const firebaseData = (nombre, departamento, ciudad, barrio, tipoCalle, numeroCalle, numero1, numero2, fechaInicio, fechaFin, telefonoContacto) => {
         const nuevoId = generarClaveUnica();
+        const userId = sessionStorage.getItem('user_uid');
         //Data de pedido
         let rentData = {
+            id_usuario: userId,
             nombre: nombre,
             departamento: departamento,
             ciudad: ciudad,
@@ -155,7 +157,7 @@ window.addEventListener('load', () => {
     const rentaRealizada = () => {
         Swal.fire({
             icon: 'success',
-            title: 'El la renta se ha realizado exitosamente',
+            title: 'La renta se ha realizado exitosamente',
             showConfirmButton: true
         }).then((result) => {
             if (result.isConfirmed) {
