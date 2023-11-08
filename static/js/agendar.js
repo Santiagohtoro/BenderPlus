@@ -1,4 +1,18 @@
 window.addEventListener('load', () => {
+    
+    if(sessionStorage.getItem('user_uid') == null){
+        Swal.fire({
+            icon: 'error',
+            title: 'Ingreso',
+            text: 'Debes iniciar sesión para comprar',
+            showConfirmButton: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.replace('./loginRegister.html');
+            }
+        })
+    }
+
     const btnContinuar = document.getElementById('btnContinuar');
 
     let inputName = document.getElementById('inputName');
