@@ -1,5 +1,4 @@
 window.addEventListener('load', () => {
-    const database = firebase.database();
 
     const btnContinuar = document.getElementById('btnContinuar');
 
@@ -138,6 +137,7 @@ window.addEventListener('load', () => {
         return Date.now().toString() + Math.random().toString(36).substr(2, 9);
     }
 
+    const database = firebase.database();
     /**
      * 
      * @param {String} nombre 
