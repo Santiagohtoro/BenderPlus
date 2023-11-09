@@ -29,6 +29,7 @@ window.addEventListener("load", function () {
       snapshot.forEach((childSnapshot) => {
         
         const data = childSnapshot.val();
+        console.log(data);
         const keyData= childSnapshot.key;
         const robotCard = document.createElement("div");
         const url = `productDetail.html?key=${keyData}`;
