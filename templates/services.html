@@ -22,27 +22,22 @@
         <label for="check" class="mostrar-menu">
             &#8801
         </label>
-        <nav class="menu">
-            <a href="../index.html">Inicio</a>
-            <a href="./services.html">Servicios</a>
-            <a href="#producto">Productos</a>
-            <a href="#contacto">Contacto</a>
-            <a href="./loginRegister.html" class="login">Iniciar Sesion</a>
-            <label for="check" class="esconder-menu">
-                &#215
-            </label>
-        </nav>
-    </header>
-    <section id="banner">
-        <div class="contenido-banner">
-            <video class="video" autoplay>
-                <source src="../attachment/video/Futurama - Bender El Tremendo.mp4" type="video/mp4">
-            </video>
-            <div class="text-video">
-                <h3>Disfruta de todos nuestros productos y servicios<br> de la mejor calidad, Diversion asegurada </h3>
-            </div>
+        <i class="fa-solid fa-user-secret usuario"><a class="nombreUsuario"></a></i>
+        <div class="opciones">
+            <nav class="menu">
+                <a href="../index.html">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#producto">Productos</a>
+
+
+                <a id="logout">Cerrar Sesiòn</a>
+
+                <label for="check" class="esconder-menu">
+                    &#215
+                </label>
+            </nav>
         </div>
-    </section>
+    </header>
     <section id="servicios">
         <h2 class="servicios-titulo">Servicios</h2>
         <div class="carrusel-servicios">
@@ -86,80 +81,15 @@
         </div>
     </section>
     <!--Seccion de producto-->
-    <section id="robots-section">
+    <section id="robots-section ">
         <h2 class="robot-title">Mujerzuelas</h2>
-        <div class="robot-card">
-            <img src="../attachment/images/r1.jpg" alt="Robot 1">
-            <h4>Candy</h4>
-            <p>"¿Me das fuego? Necesito encenderme de ti"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
+        <div class="bots-cards-container"></div>
 
-        <div class="robot-card">
-            <img src="../attachment/images/r2.jpg" alt="Robot 2">
-            <h4>Kendall</h4>
-            <p>"Me gusta pecar con tentaciones como tú"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r3.jpg" alt="Robot 3">
-            <h4>Dakota</h4>
-            <p>"No dejo de pensar en otra cosa que no sea tocarte"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r4.jpg" alt="Robot 4">
-            <h4>Trixie</h4>
-            <p>"Soy tu próximo amor, ¿me invitas a tu cama?"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r5.jpg" alt="Robot 5">
-            <h4>Kitty</h4>
-            <p>"Sabemos que el remedio para lo nuestro es terminar en tu colchón"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r6.jpg" alt="Robot 6">
-            <h4>Pamela</h4>
-            <p>"Necesito horas extras en el día para recorrerte el cuerpo"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
     </section>
-
-    <section id="contacto">
-        <h4>Contacta con nosotros</h4>
-        <form id="form">
-            <div class="datos-form">
-                <div class="nombre" data-aos="fade-down-right">
-                    <label for="from_name">Nombre</label>
-                    <input type="text" name="from_name" id="from_name" placeholder="Ingrese su nombre">
-                </div>
-                <div class="email" data-aos="fade-down-right">
-                    <label for="email_id">Email</label>
-                    <input type="email_id" name="email_id" id="email" placeholder="Ingrese su correo electronico">
-                </div>
-            </div>
-            <div class="mensaje" data-aos="fade-down-right">
-                <label for="message">Mensaje</label>
-                <textarea name="message" id="message" cols="40" rows="10"
-                    placeholder="¿Que mensaje quieres dejarnos?"></textarea>
-            </div>
-            </div>
-            <div class="boton-formulario" data-aos="fade-down-right">
-                <input type="submit" id="button" value="Send Email" class="boton-saber-mas boton-iconos-mas text-send">
-            </div>
-        </form>
-        <script src="../app.js"></script>
-    </section>
-
     <footer>
         <p>&copy2023 DiseñoSoft</p>
     </footer>
+    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -170,7 +100,13 @@
     <script src="https://kit.fontawesome.com/6b77486424.js" crossorigin="anonymous"></script>
     <script>
         AOS.init();
-    </script>
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="../static/js/credenciales.js"></script>
+    <script src="../static/js/services.js"></script>
+    <script src="../static/js/carrusel.js"></script>
 </body>
 
 </html>

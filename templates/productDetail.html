@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bender+</title>
+    <link rel="icon" type="image/x-icon" href="/images/bender.ico">
+    <!-- Incluir Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/static/css/productDetail.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="../static/js/credenciales.js"></script>
+    <script src="../static/js/cerrarSesion.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <div class="logo" data-aos="flip-up"></div>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <i class="fa-regular fa-user fa-2x" id="userIcon"><label id="userName"></label></i>
+        <nav class="menu">
+            <a href="./services.html">Inicio</a>
+            <a href="./services.html">Servicios</a>
+            <a href="#producto">Productos</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+
+            <!-- Carrusel principal -->
+            <img class="preview ">
+
+            </img>
+
+            <div class="col-md-6">
+                <h1 class="nombreProducto">Nombre del Producto</h1>
+                <span class="descripcionTitulo">Descripción del producto: </span>
+                <p class="descripcion"> </p>
+                <p class="text-descripcion"></p>
+                <p class="precio">Precio: </p>
+                <p>Disponibilidad: En stock</p>
+                <button id="btnComprar" class="buy btn btn-primary">Comprar</button>
+                <button id="btnAlquilar" class="rent btn btn-success">Alquilar</button>
+            </div>
+        </div>
+
+        <!-- Carrusel de sugerencias -->
+        <h3 class="mt-5">Productos relacionados</h3>
+        <div id="suggestedProducts" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row" id="carouselRow">
+
+                        <!-- Agrega más productos sugeridos aquí -->
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#suggestedProducts" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#suggestedProducts" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Incluir Bootstrap JS y jQuery -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/03ce1c2806.js" crossorigin="anonymous"></script>
+    <script src="../static/js/productDetail.js"></script>
+</body>
+
+</html>

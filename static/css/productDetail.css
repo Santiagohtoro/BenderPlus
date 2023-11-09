@@ -1,0 +1,22 @@
+header{
+    top: 0px !important;
+    width: 100vw !important;
+}
+
+.container{
+    margin-top: 150px !important;
+}
+.descripcionTitulo{
+    font-size: 25px !important;
+}
+.preview{
+    
+    border-radius:  10px;
+   
+    width: auto;
+    height: 60vh;
+}
+.btn{
+    width: 200px;
+    margin: 20px;
+}
