@@ -61,6 +61,8 @@ body {
   text-decoration: none;
   padding: 0 10px;
   transition: 0.4s;
+
+  
 }
 
 .mostrar-menu,
@@ -324,7 +326,7 @@ body {
 .robot-card {
   flex-basis: calc(33.3333% - 20px);
   width: 300px;  
-  height: 400px;  
+  padding: 20px 0px;  
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -353,7 +355,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
-  width: 150px;
+  width: 70%;
   color: black;
   padding: 10px 30px;
   border: 3px solid rgb(141, 255, 130);

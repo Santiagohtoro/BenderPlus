@@ -10,12 +10,16 @@
     <script src="https://kit.fontawesome.com/6b77486424.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="../static/js/login.js">
         emailjs.init('hJe_GAO1vPd6v803d')
     </script>
+    <link rel="stylesheet" href="../static/css/services.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 </head>
 
 <body>
@@ -27,112 +31,85 @@
         <label for="check" class="mostrar-menu">
             &#8801
         </label>
-        <nav class="menu">
-            <a href="#">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#producto">Productos</a>
-            <a href="#contacto">Contacto</a>
-            <label for="check" class="esconder-menu">
-                &#215
-            </label>
-        </nav>
+        <div class="opciones">
+            <i class="fa-solid fa-user-secret usuario"><a class="nombreUsuario"></a></i>
+            <nav class="menu">
+                <a href="#">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#producto">Productos</a>
+
+
+                <a id="logout">Cerrar Sesiòn</a>
+
+                <label for="check" class="esconder-menu">
+                    &#215
+                </label>
+            </nav>
+        </div>
     </header>
     <section id="servicios">
         <h2 class="servicios-titulo">Servicios</h2>
         <div class="carrusel-servicios">
-            <div data-aos="fade-up" >
+            <div data-aos="fade-up">
 
                 <img src="../attachment/images/juegodeazar.jpg" alt="">
                 <h4>Juegos de Azar</h4>
                 <p> Gana premios y vive la experiencia de azar del mañana.</p>
                 <a href="#" class="boton-saber-mas building">Saber más</a>
             </div>
-            <div data-aos="fade-up" >
+            <div data-aos="fade-up">
 
                 <img src="../attachment/images/citasrobot.jpg" alt="">
                 <h4>Simulador de Citas</h4>
                 <p> Explora relaciones virtuales con robots diseñados para adaptarse a tus preferencias.</p>
                 <a href="#" class="boton-saber-mas building">Saber más</a>
             </div>
-            <div data-aos="fade-up" >
+            <div data-aos="fade-up">
 
                 <img src="../attachment/images/clubbaile.jpg" alt="">
                 <h4>Club de Baile Virtual</h4>
                 <p> Baila y disfruta en un club nocturno digital donde los robots son las estrellas de la pista.</p>
                 <a href="#" class="boton-saber-mas building">Saber más</a>
             </div>
-            <div data-aos="fade-up" >
+            <div data-aos="fade-up">
 
                 <img src="../attachment/images/snusnu.jpg" alt="">
                 <h4>Muerte por snu snu</h4>
-                <p> Una sentencia que se le da a los hombres en el planeta Amazonia, una sentencia que consiste en tener relaciones sexuales con el condenado hasta que este pierda la vida.</p>
+                <p> Una sentencia que se le da a los hombres en el planeta Amazonia, una sentencia que consiste en tener
+                    relaciones sexuales con el condenado hasta que este pierda la vida.</p>
                 <a href="#" class="boton-saber-mas building">Saber más</a>
             </div>
             <div data-aos="fade-up">
 
                 <img src="../attachment/images/funny.jpg" alt="">
                 <h4>Talleres de Personalización</h4>
-                <p>Diseña y personaliza tu propio robot virtual según tus deseos y especificaciones. Elige características, personalidades y más.</p>
+                <p>Diseña y personaliza tu propio robot virtual según tus deseos y especificaciones. Elige
+                    características, personalidades y más.</p>
                 <a href="#" class="boton-saber-mas building">Saber más</a>
             </div>
         </div>
     </section>
     <!--Seccion de producto-->
-    <section id="robots-section">
+    <section id="robots-section ">
         <h2 class="robot-title">Mujerzuelas</h2>
-        <div class="robot-card">
-            <img src="../attachment/images/r1.jpg" alt="Robot 1">
-            <h4>Candy</h4>
-            <p>"¿Me das fuego? Necesito encenderme de ti"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
+        <div class="bots-cards-container"></div>
         
-        <div class="robot-card">
-            <img src="../attachment/images/r2.jpg" alt="Robot 2">
-            <h4>Kendall</h4>
-            <p>"Me gusta pecar con tentaciones como tú"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r3.jpg" alt="Robot 3">
-            <h4>Dakota</h4>
-            <p>"No dejo de pensar en otra cosa que no sea tocarte"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r4.jpg" alt="Robot 4">
-            <h4>Trixie</h4>
-            <p>"Soy tu próximo amor, ¿me invitas a tu cama?"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r5.jpg" alt="Robot 5">
-            <h4>Kitty</h4>
-            <p>"Sabemos que el remedio para lo nuestro es terminar en tu colchón"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>
-
-        <div class="robot-card">
-            <img src="../attachment/images/r6.jpg" alt="Robot 6">
-            <h4>Pamela</h4>
-            <p>"Necesito horas extras en el día para recorrerte el cuerpo"</p>
-            <a href="#" class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
-        </div>    
     </section>
     <footer>
         <p>&copy2023 DiseñoSoft</p>
     </footer>
+
     <!-- https://michalsnik.github.io/aos/ -->
     <script src="../pageppl.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/carrucel.js"></script>
+    <script src="../static/js/credenciales.js"></script>
+    <script src="../static/js/services.js"></script>
 </body>
 
 </html>

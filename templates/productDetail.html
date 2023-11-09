@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bender+</title>
+    <link rel="icon" type="image/x-icon" href="/images/bender.ico">
+    <!-- Incluir Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/static/css/productDetail.css">
+</head>
+<body>
+    <header>
+        <a href="#">
+            <div class="logo" data-aos="flip-up"></div>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="./services.html">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#producto">Productos</a>
+            <a id="logout">Cerrar Sesiòn</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Carrusel principal -->
+            <div id="productCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/benderplus-95a1b.appspot.com/o/r6.jpg?alt=media&token=37e7e185-c9fb-4ea0-8aad-162faad5d8fd" class="d-block w-100" alt="Producto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://drive.google.com/file/d/1w9gFzrYCO2q92QzIxOfqVhs62xNjU8fD/view?usp=drive_link" class="d-block w-100" alt="Producto 2">
+                    </div>
+                    <!-- Agrega más imágenes aquí -->
+                </div>
+                <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1>Nombre del Producto</h1>
+            <p class="descripcion">Descripción del producto:</p>
+            <p>Precio: $100.00</p>
+            <p>Disponibilidad: En stock</p>
+            <button class="btn btn-primary">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Carrusel de sugerencias -->
+    <h3 class="mt-5">Productos relacionados</h3>
+    <div id="suggestedProducts" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="https://drive.google.com/file/d/1w9gFzrYCO2q92QzIxOfqVhs62xNjU8fD/view?usp=drive_link" class="d-block w-100" alt="Producto Sugerido 1">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://drive.google.com/file/d/1w9gFzrYCO2q92QzIxOfqVhs62xNjU8fD/view?usp=drive_link" class="d-block w-100" alt="Producto Sugerido 2">
+                    </div>
+                    <!-- Agrega más productos sugeridos aquí -->
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#suggestedProducts" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#suggestedProducts" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
+
+<!-- Incluir Bootstrap JS y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

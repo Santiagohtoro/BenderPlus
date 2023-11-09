@@ -1,7 +1,8 @@
 //Login Firebase
 const btnLogIng = document.getElementById('btnUserLog');
 const auth = firebase.auth();
-
+const btn_logout = document.querySelector(".logout");
+const database = firebase.database();
 const login = () => {
 
     const LoginCorreo = document.getElementById('LoginInputEmail').value,
@@ -10,7 +11,8 @@ const login = () => {
     auth.signInWithEmailAndPassword(LoginCorreo, LoginPassword)
         .then(() => {
             let user = auth.currentUser;
-            window.location.href = '../index.html';
+            sessionStorage.setItem('user_uid', user.uid);
+            window.location.href = '/templates/services.html';
         })
         .catch((error) => {
             const errorCode = error.code;
