@@ -33,6 +33,8 @@ window.addEventListener('load', () => {
 
     const errors = [];
 
+    
+
     // Función para validar los campos
     const validarCampos = () => {
         btnContinuar.addEventListener('click', (e) => {
@@ -151,6 +153,10 @@ window.addEventListener('load', () => {
     }
 
     const database = firebase.database();
+    
+   
+    
+
     /**
      * 
      * @param {String} nombre 
@@ -168,6 +174,8 @@ window.addEventListener('load', () => {
     const firebaseData = (nombre, departamento, ciudad, barrio, tipoCalle, numeroCalle, numero1, numero2, radioValue, telefonoContacto, descriptionText) => {
         const nuevoId = generarClaveUnica();
         const userId = sessionStorage.getItem('user_uid');
+
+
         //Data de pedido
         let deliveryData = {
             id_usuario: userId,
@@ -183,8 +191,11 @@ window.addEventListener('load', () => {
                 vivienda_trabajo: radioValue
             },
             telefonoContacto: telefonoContacto,
-            descripcion: descriptionText
+            descripcion: descriptionText,
+
         }
+
+    
         database.ref('pedidos/' + nuevoId).set(deliveryData);
         pedidoRealizado();
     }

@@ -37,8 +37,9 @@ window.addEventListener("load", function () {
       const container = document.querySelector(".bots-cards-container");
       snapshot.forEach((childSnapshot) => {
 
-        const data = childSnapshot.val();
-        const keyData = childSnapshot.key;
+        console.log(data);
+        const keyData= childSnapshot.key;
+
         const robotCard = document.createElement("div");
         const url = `productDetail.html?key=${keyData}`;
         robotCard.className = "robot-card";

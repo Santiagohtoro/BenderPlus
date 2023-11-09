@@ -10,14 +10,17 @@ productRef.once("value")
   .then((snapshot) => {
     const data = snapshot.val();
     const keyData = snapshot.key;
+    console.log(keyData);
     const containerImage = document.querySelector(".preview")
     const nameProd = document.querySelector(".nombreProducto")
     const descripProd = document.querySelector(".descripcion")
      document.querySelector(".precio").innerText +=` ${data.precio}`
-    const rent =document.querySelector(".rent");
-    const buy = document.querySelector(".buy");
-    const url = `productDetail.html?key=${keyData}`;
-    
+    const rent =document.getElementById("btnAlquilar");
+    const buy = document.getElementById("btnComprar");
+    const urlBuy = `comprar.html?key=${keyData}`;
+    const urlRent= `alquiler.html?key=${keyData}`;
+    rent.setAttribute("href",`${urlRent}`)
+    buy.setAttribute("href",`${urlBuy}`)
     containerImage.setAttribute("src",`${data.urlImagen}`)
     nameProd.innerText =`${data.nombre}`
     descripProd.innerText =` ${data.descripcion}`
