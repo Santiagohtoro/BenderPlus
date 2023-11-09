@@ -1,4 +1,18 @@
 window.addEventListener('load', () => {
+
+    if (sessionStorage.getItem('user_uid') == null) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Ingreso',
+            text: 'Debes iniciar sesión para comprar',
+            showConfirmButton: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.replace('./loginRegister.html');
+            }
+        })
+    }
+
     const btnContinuar = document.getElementById('btnContinuar');
 
     let inputName = document.getElementById('inputName');
@@ -36,12 +50,26 @@ window.addEventListener('load', () => {
             validarSelect(inputTypeStreet, "Tipo de calle", "Se debe seleccionar una opción en el campo tipo de calle");
             validarCampo(inputStreet, "Calle", "El campo calle no puede estar vacío");
             validarCampo(inputStartDate, "Fecha Inicio", "El campo fecha inicial no puede estar sin selección");
-            if(!inputCalendar.checked){
+            if (!inputCalendar.checked) {
                 validarCampo(inputFinalDate, "Fecha Final", "El campo fecha final no puede estar sin selección");
             }
             validarCampo(inputContactNum, "Teléfono de contacto", "El campo teléfono de contacto no puede estar vacío");
 
-            imprimirErrores();
+            if (errors.length > 0) {
+                imprimirErrores();
+            } else {
+                firebaseData(inputName.value,
+                    inputDeparment.value,
+                    inputCity.value,
+                    inputNeigh.value,
+                    inputTypeStreet.value,
+                    inputStreet.value,
+                    inputNumber1.value,
+                    inputNumber2.value,
+                    inputStartDate.value,
+                    inputFinalDate.value,
+                    inputContactNum.value);
+            }
         });
     };
 
@@ -97,7 +125,76 @@ window.addEventListener('load', () => {
         errors.splice(0, errors.length);
     };
 
+    function generarClaveUnica() {
+        return Date.now().toString() + Math.random().toString(36).substr(2, 9);
+    }
+
+    const database = firebase.database();
+    /**
+     * 
+     * @param {String} nombre 
+     * @param {String} departamento 
+     * @param {String} ciudad 
+     * @param {String} barrio 
+     * @param {String} tipoCalle 
+     * @param {int} numeroCalle 
+     * @param {int} numero1 
+     * @param {int} numero2 
+     * @param {String} fechaInicio 
+     * @param {String} fechaFin 
+     * @param {int} telefonoContacto 
+     */
+    const firebaseData = (nombre, departamento, ciudad, barrio, tipoCalle, numeroCalle, numero1, numero2, fechaInicio, fechaFin, telefonoContacto) => {
+        const nuevoId = generarClaveUnica();
+        const userId = sessionStorage.getItem('user_uid');
+        //Data de pedido
+        let rentData = {
+            id_usuario: userId,
+            nombre: nombre,
+            departamento: departamento,
+            ciudad: ciudad,
+            barrio: barrio,
+            direccion: {
+                tipo_calle: tipoCalle,
+                numero: numeroCalle,
+                numeral_1: numero1,
+                numeral_2: numero2,
+            },
+            telefonoContacto: telefonoContacto,
+            fecha_inicio: fechaInicio,
+            fecha_fin: fechaFin
+        }
+        database.ref('alquiler/' + nuevoId).set(rentData);
+        rentaRealizada();
+    }
+
+    const rentaRealizada = () => {
+        Swal.fire({
+            icon: 'success',
+            title: 'La renta se ha realizado exitosamente',
+            showConfirmButton: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.replace('../index.html');
+            }
+        })
+    }
+
+    const mostrarUsuario = () => {
+        const userData = firebase.database().ref("users/" + sessionStorage.getItem("user_uid"));
+        const userName = firebase.database().ref("users/" + sessionStorage.getItem("user_uid") + "/nombre");
+        userData.on("value", function (snapshot) {
+            const dataInfo = snapshot.val();
+            sessionStorage.setItem("user", JSON.stringify(dataInfo));
+        });
+
+        userName.on("value", function (snapshot) {
+            document.getElementById("userName").innerText = snapshot.val();
+        });
+    }
+
     // Iniciar las funciones
     validarCampos();
     verificarCheck();
+    mostrarUsuario();
 });

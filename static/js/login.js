@@ -10,7 +10,11 @@ const login = () => {
     auth.signInWithEmailAndPassword(LoginCorreo, LoginPassword)
         .then(() => {
             let user = auth.currentUser;
-            window.location.href = '../index.html';
+
+            console.log('Usario ingreso:');
+            console.log(user);
+            sessionStorage.setItem('user_uid', user.uid);
+            location.replace('../index.html');
         })
         .catch((error) => {
             const errorCode = error.code;

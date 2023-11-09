@@ -7,3 +7,28 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     s1.setAttribute('crossorigin', '*');
     s0.parentNode.insertBefore(s1, s0);
 })();
+
+window.addEventListener('load', () => {
+    const database = firebase.database();
+
+    userIcon = document.getElementById('userIcon');
+
+    const mostrarUsuario = () => {
+        if (sessionStorage.getItem('user_uid') !== null) {
+            const userData = firebase.database().ref("users/" + sessionStorage.getItem("user_uid"));
+            const userName = firebase.database().ref("users/" + sessionStorage.getItem("user_uid") + "/nombre");
+            userData.on("value", function (snapshot) {
+                const dataInfo = snapshot.val();
+                sessionStorage.setItem("user", JSON.stringify(dataInfo));
+            });
+
+            userName.on("value", function (snapshot) {
+                document.getElementById("userName").innerText = snapshot.val();
+            });
+        } else {
+            userIcon.style.display = 'none';
+        }
+    }
+
+    mostrarUsuario();
+});
