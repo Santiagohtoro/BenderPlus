@@ -14,7 +14,7 @@ const login = () => {
             console.log('Usario ingreso:');
             console.log(user);
             sessionStorage.setItem('user_uid', user.uid);
-            location.replace('../index.html');
+            location.replace('../templates/services.html');
         })
         .catch((error) => {
             const errorCode = error.code;
