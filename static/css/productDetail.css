@@ -6,6 +6,17 @@ header{
 .container{
     margin-top: 150px !important;
 }
-.descripcion{
-    font-size: 25px;
+.descripcionTitulo{
+    font-size: 25px !important;
+}
+.preview{
+    
+    border-radius:  10px;
+   
+    width: auto;
+    height: 60vh;
+}
+.btn{
+    width: 200px;
+    margin: 20px;
 }

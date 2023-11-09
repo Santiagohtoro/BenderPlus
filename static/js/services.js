@@ -27,15 +27,17 @@ window.addEventListener("load", function () {
   .then((snapshot) => {
     const container = document.querySelector(".bots-cards-container");
     snapshot.forEach((childSnapshot) => {
+      
       const data = childSnapshot.val();
       const keyData= childSnapshot.key;
       const robotCard = document.createElement("div");
+      const url = `productDetail.html?key=${keyData}`;
       robotCard.className = "robot-card";
       robotCard.innerHTML = `
         <img src="${data.urlImagen}" alt="Robot 2">
         <h4>${data.nombre}</h4>
         <p>$ ${data.precio}</p>
-        <a href="" id=${keyData} class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
+        <a href="${url}" id=${keyData} class="boton-saber-mas-robot building">Conoce mas sobre ella</a>
       `;
       container.appendChild(robotCard);
     });
@@ -44,11 +46,6 @@ window.addEventListener("load", function () {
     console.error("Error al obtener elementos: ", error);
   });
   
-  const card = document.querySelector(".robot-card");
-  card.addEventListener('click', e=>{
-    let botId = e.target.id;
-    sessionStorage.setItem("botId", botId);
-    window.location.replace("../../templates/productDetail.html")
-  })
+  
 
 });
