@@ -127,10 +127,10 @@ window.addEventListener('load', () => {
 
     //Funcion validar text area
     const validarTextArea = (textArea) => {
-        if (textArea.trim() == '') {
+        if (typeof textArea === 'string' && textArea.trim() === '') {
             descriptionText = "";
         }
-    }
+    };    
 
     // Función para imprimir errores
     const imprimirErrores = () => {
@@ -201,8 +201,22 @@ window.addEventListener('load', () => {
         })
     }
 
+    const mostrarUsuario = () => {
+        const userData = firebase.database().ref("users/" + sessionStorage.getItem("user_uid"));
+        const userName = firebase.database().ref("users/" + sessionStorage.getItem("user_uid") + "/nombre");
+        userData.on("value", function (snapshot) {
+            const dataInfo = snapshot.val();
+            sessionStorage.setItem("user", JSON.stringify(dataInfo));
+        });
+
+        userName.on("value", function (snapshot) {
+            document.getElementById("userName").innerText = snapshot.val();
+        });
+    }
+
     // Iniciar las funciones
     validarCampos();
     verificarCheck();
     validarTextArea();
+    mostrarUsuario();
 });

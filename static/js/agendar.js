@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
-    
-    if(sessionStorage.getItem('user_uid') == null){
+
+    if (sessionStorage.getItem('user_uid') == null) {
         Swal.fire({
             icon: 'error',
             title: 'Ingreso',
@@ -180,7 +180,21 @@ window.addEventListener('load', () => {
         })
     }
 
+    const mostrarUsuario = () => {
+        const userData = firebase.database().ref("users/" + sessionStorage.getItem("user_uid"));
+        const userName = firebase.database().ref("users/" + sessionStorage.getItem("user_uid") + "/nombre");
+        userData.on("value", function (snapshot) {
+            const dataInfo = snapshot.val();
+            sessionStorage.setItem("user", JSON.stringify(dataInfo));
+        });
+
+        userName.on("value", function (snapshot) {
+            document.getElementById("userName").innerText = snapshot.val();
+        });
+    }
+
     // Iniciar las funciones
     validarCampos();
     verificarCheck();
+    mostrarUsuario();
 });

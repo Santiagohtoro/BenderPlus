@@ -28,3 +28,28 @@ for (let i = 0; i < btnDropdown.length; i++) {
         }
     });
 }
+
+window.addEventListener('load', () => {
+    const database = firebase.database();
+
+    userIcon = document.getElementById('userIcon');
+
+    const mostrarUsuario = () => {
+        if (sessionStorage.getItem('user_uid') !== null) {
+            const userData = firebase.database().ref("users/" + sessionStorage.getItem("user_uid"));
+            const userName = firebase.database().ref("users/" + sessionStorage.getItem("user_uid") + "/nombre");
+            userData.on("value", function (snapshot) {
+                const dataInfo = snapshot.val();
+                sessionStorage.setItem("user", JSON.stringify(dataInfo));
+            });
+
+            userName.on("value", function (snapshot) {
+                document.getElementById("userName").innerText = snapshot.val();
+            });
+        } else {
+            userIcon.style.display = 'none';
+        }
+    }
+
+    mostrarUsuario();
+});
